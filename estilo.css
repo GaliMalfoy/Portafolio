@@ -704,18 +704,20 @@ h3 {
     display: inline-block;
     margin-right: 20px;
 }
-footer{
-    background-color: #14191b;
+footer {
+    background-color: #252A2E;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
     width: 100%;
 }
-footer .redes{
+
+footer .redes {
     margin-bottom: 20px;
 }
-footer .redes a{
+
+footer .redes a {
     color: #008080;
     display: inline-block;
     text-decoration: none;
@@ -728,7 +730,8 @@ footer .redes a{
     font-size: 20px;
     transition: .3s;
 }
-footer .arriba{
+
+footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
@@ -742,9 +745,9 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
+
 /* SECCION RESPONSIVE */
-/* Media query para dispositivos de hasta 980px */
-@media screen and (max-width:980px) {
+@media screen and (max-width:980px){
     nav {
         display: none;
     }
@@ -768,30 +771,12 @@ footer .arriba{
     }
 }
 
-/* Media query para dispositivos de hasta 700px */
-@media screen and (max-width:700px) {
+@media screen and (max-width:700px){
     .sobremi .fila {
         display: block;
     }
-    .contacto .contenido-seccion {
-        padding: 10px;
-    }
-    .contacto .fila {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .contacto .col {
-        width: 100%;
-        padding: 10px;
-    }
-    .contacto input, .contacto textarea, .contacto button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
     .sobremi .fila .col {
-        width: 100%;
+        width: 100%; /* Ajustado para mejor compatibilidad */
     }
 
     .skills .fila {
@@ -804,17 +789,25 @@ footer .arriba{
         width: 100%;
     }
 
+    .curriculum .fila {
+        display: block;
+    }
+    .curriculum .fila .col {
+        width: 90%;
+    }
+    .curriculum .fila .derecha {
+        margin-left: 20px;
+    }
+
     .portfolio .galeria {
         display: block;
         width: 100%;
     }
     .portfolio .galeria .proyecto {
         max-width: 100%;
-        margin: 0 auto;
     }
     .portfolio .galeria .proyecto img {
         width: 100%;
-        height: auto;
     }
     .contacto .fila {
         display: block;
@@ -839,7 +832,6 @@ footer .arriba{
     }
 }
 
-/* General styles to ensure full width for elements */
 .portfolio .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -856,62 +848,8 @@ footer .arriba{
     box-sizing: border-box;
 }
 
-    .github-btn {
-        display: inline-block;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px solid #fff;
-        width: auto; 
-        margin-top: 10px;
-        padding: 10px 22px;
-        font-size: 12px;
-        color: #fff;
-        position: relative;
-        z-index: 10;
-        text-decoration: none;
-    }
-
-
-.portfolio .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.portfolio .galeria .proyecto {
-    position: relative;
-    flex: 1 1 calc(33.3333% - 20px);
-    max-width: calc(33.3333% - 20px);
-    height: auto; 
-    margin: 10px;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
+/* Evitar duplicados */
 .contenedor-header, .portfolio, .contacto, footer {
     max-width: 100%;
     overflow-x: hidden;
-}
-
-.contacto {
-    background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
-    padding: 50px 0 100px; /* Añadir padding inferior */
-}
-
-footer .arriba {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #008080;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -25px;
-    border-radius: 50%;
-    line-height: 50px;
-    font-size: 18px;
-    z-index: 9999; /* Asegurar que el botón esté por encima de otros elementos */
 }
