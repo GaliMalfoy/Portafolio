@@ -622,7 +622,7 @@ h3 {
 
 /* SECCION CONTACTO */
 .contacto{
-    background-image: url(img/contact_bg.png);
+   
     background-color: #1e2326;
     color: #fff;
     padding: 50px 0;
@@ -704,6 +704,32 @@ h3 {
     display: inline-block;
     margin-right: 20px;
 }
+.contacto .col .info {
+    position: absolute;
+    top: 40%;
+    background-color: #252A2E;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Agrega esta línea */
+}
+
+.contacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 2; /* Asegúrate de que el z-index sea mayor */
+}
+
+
 footer {
     background-color: #252A2E;
     color: #fff;
@@ -744,7 +770,7 @@ footer .arriba {
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
-}
+    z-index: 2; /* Asegúrate de que el z-index sea mayor */
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width:980px){
